@@ -1,0 +1,8 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "wood/wood_wall002b"
+	"$basetexture2" "tools/toolsblack"
+	"$surfaceprop" "wood"
+	"$surfaceprop2" "wood"
+	"%keywords" "tf pl_volcanic"
+}

@@ -1,0 +1,18 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "nature/rock_molten004"
+	"$selfillum" 1
+	"selfillumtint" "[248 189 0]"
+	"$surfaceprop" "mud"
+	"$nodecal" 1
+	"%keywords" "tf"
+	"Proxies"
+	{
+		"TextureScroll"
+		{
+			"texturescrollvar" "$baseTextureTransform"
+			"texturescrollrate" .1
+			"texturescrollangle" 90.00
+		}
+	}
+}

@@ -1,0 +1,57 @@
+"Water" // this is a water shader
+{
+
+    "%tooltexture" "pl_volcanic/rock_molten004" //shows up in your texture browser
+    "$refracttexture" "pl_volcanic/rock_molten004" //set water refraction - not the same as water reflection. sets the blurriness in the water.
+    // "$translucent" "1"
+
+
+    "$abovewater" "1"
+
+    "Water_DX90" //these are fallbacks to help the player match the DX level on their video card.
+    {
+        "$refractamount" ".2"
+    }
+    "Water_DX81"
+    {
+        "$refractamount" ".1"
+    }
+    "Water_DX80"
+    {
+        "$refractamount" ".1"
+    }
+    "Water_DX60"
+    {
+        "$fallbackmaterial" "pl_volcanic/rock_molten004" // this is good to set from the last water texture you created because it will not reflect.
+    }
+
+    "$scale" "[.5 .5]"
+
+    "$bumpmap" "pl_volcanic/rock_molten004_dudv"
+    "$normalmap" "pl_volcanic/rock_molten004_normal"
+    "$envmap" "env_cubemap" //this is for the cubemaps to work so they grab and reflect back your map. you can also specify a texture if you wish like this "$envmap" "mytexture"
+
+    "%compilewater" "1"
+    "$surfaceprop" "mud"
+    "$bottommaterial" "pl_volcanic/rock_molten004_under"
+
+    "$fogenable" "1"
+    "$fogcolor" "[.1 .1 0]"
+    "$fogstart" "0"
+    "$fogend" "150"
+
+    "Proxies"
+    {
+
+
+        "TextureScroll"
+        {
+            "texturescrollvar" "$bumptransform"
+            "texturescrollrate" ".1"
+            "texturescrollangle" "90.00"
+        }
+
+        "WaterLOD" "1" //I think it lets lod controller entity adjust cheap/expensive distance, don't think it's requied, works without it.
+
+    }
+}
